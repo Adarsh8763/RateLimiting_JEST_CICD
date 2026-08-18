@@ -1,4 +1,4 @@
-name: CD — Test & Deploy
+name: CD — Test & Deploy    #name: is just the display name of the GitHub Actions workflow
 
 on:
   push:
@@ -7,6 +7,8 @@ on:
 jobs:
 
   # ── Job 1: Run tests ─────────────────────────────
+
+  # CI part
   test:
     name: Run Tests
     runs-on: ubuntu-latest      #Kis machine pr ye run hoga
@@ -18,6 +20,8 @@ jobs:
       - run: npm run test
 
   # ── Job 2: Deploy (only if tests passed) ─────────
+
+  # CD part
   deploy:
     name: Deploy to Production
     runs-on: ubuntu-latest
