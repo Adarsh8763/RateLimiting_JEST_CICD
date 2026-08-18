@@ -3,8 +3,6 @@ name: CD — Test & Deploy
 on:
   push:
     branches: [main]    # only runs when code lands on main
-    paths:
-      - "RateLImiting_JEST/**"
 
 jobs:
 
@@ -12,9 +10,6 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest      #Kis machine pr ye run hoga
-    defaults:
-      run:
-        working-directory: RateLImiting_JEST
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
