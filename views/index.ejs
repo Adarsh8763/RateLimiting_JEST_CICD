@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <section class="pt-10 flex flex-col items-center justify-center h-[300px]">
+        <img src="<%= profileImg %>" alt="" class="h-[7rem] w-[7rem] rounded-full shadow-md object-cover">
+        <h2 class="text-2xl mt-4"><%= username %></h2>
+        <p class="mt-2"><%= bio %></p>
+        
+        <!-- these logic and variable doesn't reach our client these are executed in server side only and on client side only the html plain text is send -->
+        <% const age = 19 %>
+        <h1>
+            <%= age >= 18 ? "Adult" : "Not an adult" %>
+        </h1>
+    </section>
+</body>
+</html>
